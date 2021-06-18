@@ -1,9 +1,9 @@
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>
 /* more headers goes there */
 
 /* 0-positive_or_negative.c */
+int main(void)
 int main(void)
 {
 	int n;
@@ -21,8 +21,6 @@ int main(void)
 	else
 	{
 		printf("%d is zero\n", n);
-
 	}
-	
 	return (0);
 }
