@@ -9,17 +9,17 @@
  */
 int main(void)
 {
-	int n = 0;
+	int num = 48;
 
-	while (n < 10)
+	while (num <= 57)
 	{
-		putchar(n);
-		if (n < 10)
+		putchar(num);
+		if (num < 57)
 		{
 			putchar(',');
 			putchar(' ');
 		}
-		n++;
+		num++;
 	}
 	putchar('\n');
 	return (0);
