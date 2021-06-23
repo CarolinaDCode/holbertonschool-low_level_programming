@@ -12,14 +12,15 @@ int _isalpha(int c)
 		if (c > 90 && c < 97)
 		{
 			return (0);
-		}else
+		}
+		else
 		{
 			return (1);
 		}
-		
+
 	}
 	else
 	{
 		return (0);
-	}	
+	}
 }
