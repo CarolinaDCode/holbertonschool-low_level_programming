@@ -10,9 +10,9 @@
 void print_number(int n)
 {
 	int cont = 1;
-	unsigned int numOriginal;
+	int numOriginal;
 	int i;
-	int uniq = 0;
+	unsigned int uniq = 0;
 	int divisor;
 	int veces;
 
