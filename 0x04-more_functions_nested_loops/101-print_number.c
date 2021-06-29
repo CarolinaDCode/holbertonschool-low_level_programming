@@ -3,9 +3,9 @@
 /* more headers goes there */
 #include <stdio.h>
 /**
- * main - Entry point
- *
- * Return: Always 0 (success)
+ * print_number - a function that prints an integer
+ * @n: integer to be printed
+ * Return: void
  */
 void print_number(int n)
 {
