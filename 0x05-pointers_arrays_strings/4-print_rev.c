@@ -14,7 +14,7 @@ void print_rev(char *s)
 		iterador++;
 	}
 
-	iterador--; /* le restará 1 al 63, para que la siguiente while no tome en cuenta al caracter nulo*/
+	iterador--; /* le restará 1 al 63, para que el siguiente while no tome en cuenta al caracter nulo*/
 	while (iterador >= 0)
 	{
 		_putchar(s[iterador]);
