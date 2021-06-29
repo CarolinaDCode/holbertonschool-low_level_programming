@@ -10,7 +10,7 @@
 void print_number(int n)
 {
 	int cont = 1;
-	int numOriginal;
+	unsigned int numOriginal;
 	int i;
 	unsigned int uniq = 0;
 	int divisor;
