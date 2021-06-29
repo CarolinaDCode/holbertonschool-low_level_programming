@@ -9,12 +9,12 @@
  */
 void print_number(int n)
 {
-	int cont = 1;
+	unsigned int cont = 1;
 	unsigned int numOriginal;
-	int i;
+	unsigned int i;
 	unsigned int uniq = 0;
-	int divisor;
-	int veces;
+	unsigned int divisor;
+	unsigned int veces;
 
 	if (n < 0)
 	{
