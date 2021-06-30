@@ -8,7 +8,7 @@
 void rev_string(char *s)
 {
 	int listaInvertida = 0, iterador = 0;
-	char cadena[20];
+	char cadena[1000];
 
 	while (s[iterador] != '\0')
 	{
