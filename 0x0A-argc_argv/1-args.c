@@ -9,8 +9,6 @@
 int main(int argc, char **argv)
 {
 	(void) argv;
-	printf("%d\n", argc-1);
+	printf("%d\n", argc - 1);
 	return (0);
-	/*aqui necesito que le reste uno a cantidad de
-	  argumentos pasados*/
 }
