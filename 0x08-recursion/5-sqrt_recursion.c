@@ -7,17 +7,18 @@
  */
 int _sqrt(int n, int x)
 {
-	if(x * x == n)
+	if (x * x == n)
 		return (x);
-	else if(x * x > n)
+	else if (x * x > n)
 		return (-1);
 
-	return (_sqrt(n,x+1));
+	return (_sqrt(n, x + 1));
 }
 
 #include "holberton.h"
 /**
- * _puts_recursion - a function that returns the natural square root of a number
+ * _sqrt_recursion - a function that returns
+ * the natural square root of a number
  * @n: pointer to string
  * Return: _sqrt_recursion
  *
@@ -31,5 +32,5 @@ int _sqrt_recursion(int n)
 	if (n == 1)
 		return (1);
 
-	return (_sqrt(n,2));
+	return (_sqrt(n, 2));
 }
