@@ -10,47 +10,34 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	int n1 = 0, n2 = 0, i = 0;
-	char *s;
+	int size1 = 0, size2 = 0;
+	int i;
+	char *newp;
 
 	if (s1 != NULL)
 	{
-		n1 = _strlen_recursion(s1);
+		for (i = 0; s1[i] != '\0'; i++)
+			size1++;
 	}
+
 	if (s2 != NULL)
 	{
-		n2 = _strlen_recursion(s2);
+		for (i = 0; s2[i] != '\0'; i++)
+			size2++;
 	}
+	
+	newp = (char *)malloc(size1 + size2 + 1 * sizeof(char));
 
-	s = malloc(n1 + n2 + 1);
-	if (s == NULL)
-		return (0);
+	if (newp == NULL)
+		return (NULL);
 
-	for (i = 0; i < n1; i++)
-		s[i] = s1[i];
+	for (i = 0; i < size1; i++)
+		newp[i] = s1[i];
 
-	for (; i < n1 + n2; i++)
-		s[i] = s2[i - n1];
+	for (i = 0; i < size2; i++)
+		newp[i + size1] = s2[i];
 
-	s[i] = '\0';
+	*(newp + size1 + size2) = '\0';
 
-	return (s);
-}
-/**
- * _strlen_recursion  - prints the last digit of a number
- * @s: The number to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-
-int _strlen_recursion(char *s)
-{
-	if (*s == '\0')
-	{
-		return (0);
-	}
-
-	s++;
-	return (1 + _strlen_recursion(s));
+	return (newp);
 }
