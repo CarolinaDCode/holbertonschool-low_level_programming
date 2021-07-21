@@ -15,10 +15,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 	int i;
 	dog_t *dog_copy;
 
-	while (name[size_name] != '\0')
+	while (*(name + size_name) != '\0')
 		size_name++;
 
-	while (owner[size_owner] != '\0')
+	while (*(owner + size_owner) != '\0')
 		size_owner++;
 
 	dog_copy = malloc(sizeof(dog_t));
