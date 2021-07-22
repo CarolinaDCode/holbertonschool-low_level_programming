@@ -2,7 +2,7 @@
 #include <stdarg.h>
 #include "variadic_functions.h"
 /**
- *print_numbers - function that prints numbers, followed by a new line
+ *print_strings - prints strings, followed by a new line
  *@separator: comma
  *@n: number of parameters to sum
  *Return: void
