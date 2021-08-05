@@ -2,9 +2,8 @@
 #include "lists.h"
 
 /**
- * add_nodeint_end - function that frees a list
+ * free_listint - Write a function that frees a list
  * @head: head
- * @n: n
  * Return: void.
  */
 void free_listint(listint_t *head)
