@@ -9,10 +9,11 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int num = 0;
 	int len = 0, e = 0, mul, i;
+
 	if (b == NULL)
 		return (0);
 
-	while(b[len])
+	while (b[len])
 		len++;
 
 	for (len -= 1; len >= 0; len--)
@@ -24,7 +25,7 @@ unsigned int binary_to_uint(const char *b)
 		{
 			mul = 1;
 			for (i = 0; i < len; i++)
-				mul = mul*2;
+				mul = mul * 2;
 
 			num += mul;
 		}
