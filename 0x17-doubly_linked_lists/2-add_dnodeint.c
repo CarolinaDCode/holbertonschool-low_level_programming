@@ -15,7 +15,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 
 	new_node = malloc(sizeof(dlistint_t));
 	if (new_node == NULL)
-		return(NULL);
+		return (NULL);
 
 	if (new_head == NULL)
 	{
@@ -31,17 +31,20 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	new_node->n = n;
 
 /*el nodo nuevo pasa a ser el primero*/
-/*y este nodo apuntara al nodo que antes era primero y ahora es segundo :v*/
+/*y este nodo apuntara al nodo*/
+/*que antes era primero y ahora es segundo :v*/
 	new_node->next = new_head;
 
 /*El nuevo nodo(o primer nodo), no apunta a nada, siempre será NULL*/
 	new_node->prev = NULL;
 
-/*El head apunta al prev del que ahora es el segundo nodo, para retroceder*/
+/*El head apunta al prev*/
+/*del que ahora es el segundo nodo, para retroceder*/
 	new_head->prev = new_node;
 
-/*head apunta al nodo que recien esta entrando, y que pasará a ser el primero*/
+/*head apunta al nodo que recien esta entrando,*/
+/*y que pasará a ser el primero*/
 	*head = new_node;
 
-	return(new_node);
+	return (new_node);
 }
