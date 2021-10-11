@@ -9,18 +9,22 @@
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	unsigned long int index;
+	hash_node_t *tmp;
 
 	if (ht == NULL || key == NULL || key[0] == '\0')
 		return (NULL);
 
 	index = key_index((const unsigned char *)key, ht->size);
 
-	if (ht->array[index] == NULL)
-		return (NULL);
+	tmp = ht->array[index];
 
-	if (strcmp(ht->array[index]->key, key) == 0)
+	while (tmp != NULL)
 	{
-		return (ht->array[index]->value);
+		if (strcmp(tmp->key, key) == 0)
+		{
+			return (tmp->value);
+		}
+		tmp = tmp->next;
 	}
 	/*En caso de que exista una llave, pero no sea la que estas buscando*/
 	return (NULL);
